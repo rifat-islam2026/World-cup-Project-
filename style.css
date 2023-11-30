@@ -209,7 +209,9 @@ footer hr {
 footer nav ul {
     list-style: none;
 }
-
+nav{
+    margin-bottom: 50px;
+}
 footer nav ul {
     display: flex;
     gap: 50px;
@@ -220,4 +222,11 @@ footer nav ul {
 footer nav ul li a {
     color: var(--footer-text-color);
     font-weight: 500;
+}
+.social-icons{
+    font-size: 30px;
+}
+.social-icons a{
+    color: var(--text-color);
+    margin-right: 5px;
 }

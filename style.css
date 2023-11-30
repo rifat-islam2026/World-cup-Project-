@@ -88,6 +88,7 @@ img {
 .Group-section {
     display: flex;
     gap: 24px;
+    margin-bottom: 130px;
 }
 
 .left {
@@ -180,4 +181,43 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/*footer css */
+footer {
+    margin: auto;
+    height: 444px;
+    background-color: #161616;
+    text-align: center;
+}
+
+footer h3 {
+    padding-top: 130px;
+    margin-bottom: 50px;
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+footer hr {
+    max-width: 1320px;
+    height: 1px;
+    color: rgba(255, 255, 255, 0.10);
+    margin-bottom: 50px;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer nav ul li a {
+    color: var(--footer-text-color);
+    font-weight: 500;
 }

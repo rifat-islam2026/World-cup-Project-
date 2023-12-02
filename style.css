@@ -31,6 +31,7 @@ img {
 .top-banar {
     display: flex;
     align-items: center;
+    max-width: 1321px;
     height: 646px;
     border-radius: 30px;
     background-color: var(--bg-color);
@@ -43,7 +44,7 @@ img {
 
 .top-content h1 {
     color: var(--text-color);
-    max-width: 531px;
+    /*max-width: 531px;*/
     font-size: 70px;
     font-weight: 700;
     line-height: 80px;
@@ -62,6 +63,7 @@ img {
     background-color: var(--primary-btn-color);
     display: inline-flex;
     padding: 16px 25px;
+    border-radius: 5px;
 }
 
 .primary-button a {
@@ -98,19 +100,27 @@ img {
     border-radius: 10px;
 }
 
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
 .info-box a {
-    color: var(--bg-color);
-    display: block;
+    width: 252px;
+    height: 64px;
     text-align: center;
-    padding: 17px 39px;
     background-color: #fff;
-    margin: 35px;
     font-size: 20px;
     font-weight: 500;
     border-radius: 5px;
+    padding-top: 20px;
+    transition: all 0.5s;
 }
 
-#blogs {
+.info-box a:hover {
     background-color: var(--primary-btn-color);
     color: #fff;
 }
@@ -127,7 +137,12 @@ img {
     border-radius: 10px;
     border: 1px solid #E8E8E8;
 }
-
+.blog-imag img{
+    min-width: 100%;
+    max-height: 200.24px;
+    border-radius: 11.442px 11.442px 0px 0px;
+    object-fit: cover;
+}
 .Transfer-button {
     margin-left: 20px;
     margin-top: 20px;
@@ -209,9 +224,11 @@ footer hr {
 footer nav ul {
     list-style: none;
 }
-nav{
+
+nav {
     margin-bottom: 50px;
 }
+
 footer nav ul {
     display: flex;
     gap: 50px;
@@ -224,13 +241,79 @@ footer nav ul li a {
     font-weight: 500;
     transition: all 0.5s;
 }
-footer nav ul li a:hover{
+
+footer nav ul li a:hover {
     color: #D00;
 }
-.social-icons{
+
+.social-icons {
     font-size: 30px;
 }
-.social-icons a{
+
+.social-icons a {
     color: var(--text-color);
     margin-right: 5px;
+}
+
+/*resvonsive css teblet view */
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 85%;
+    }
+
+    .top-banar {
+        max-width: 734px;
+        height: 398px;
+    }
+
+    .top-content {
+        margin-left: 76px;
+    }
+
+    .top-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+        width: 289px;
+    }
+
+    .top-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .top-image img {
+        width: 323px;
+        height: 340px;
+        margin-top: 62px;
+    }
+
+    .Group-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        width: 100%;
+        height: auto;
+        background-color: var(--text-color);
+    }
+
+    .info-box {
+        flex-direction: row;
+   
+    }
+
+    .info-box a {
+        border: 1px solid #E8E8E8;
+    }
+
+    .right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        width: 347px;
+        height: 385.212px;
+    }
+   
 }

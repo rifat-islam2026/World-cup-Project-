@@ -30,25 +30,29 @@ img {
 /*top banar css start */
 .top-banar {
     display: flex;
-    align-items: center;
-    max-width: 1321px;
-    height: 646px;
     border-radius: 30px;
     background-color: var(--bg-color);
-    margin-bottom: 130px;
+}
+
+.top-banar>* {
+    flex-basis: 100%;
 }
 
 .top-content {
-    margin-left: 106px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding-left: 100px;
+    padding-right: 50px;
 }
 
 .top-content h1 {
     color: var(--text-color);
-    /*max-width: 531px;*/
     font-size: 70px;
     font-weight: 700;
     line-height: 80px;
-    margin-bottom: 20px;
 }
 
 .top-content p {
@@ -56,7 +60,6 @@ img {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    margin-bottom: 30px;
 }
 
 .primary-button {
@@ -78,11 +81,16 @@ img {
     font-size: 30px;
 }
 
+.top-image {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-top: 60px;
+    padding-right: 55px;
+}
+
 .top-image img {
-    max-width: 581px;
-    height: 613px;
-    margin-top: 37px;
-    margin-right: 79px;
+    width: 581px;
 }
 
 /*top banar css end */
@@ -91,6 +99,7 @@ img {
     display: flex;
     gap: 24px;
     margin-bottom: 130px;
+    padding-top: 130px;
 }
 
 .left {
@@ -112,6 +121,7 @@ img {
     width: 252px;
     height: 64px;
     text-align: center;
+    color: var(--bg-color);
     background-color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -132,17 +142,19 @@ img {
 }
 
 .blogs {
-    width: 270px;
+    max-width: 270px;
     height: 362px;
     border-radius: 10px;
     border: 1px solid #E8E8E8;
 }
-.blog-imag img{
+
+.blog-imag img {
     min-width: 100%;
     max-height: 200.24px;
     border-radius: 11.442px 11.442px 0px 0px;
     object-fit: cover;
 }
+
 .Transfer-button {
     margin-left: 20px;
     margin-top: 20px;
@@ -198,10 +210,73 @@ button {
     gap: 10px;
 }
 
+.viwe-btn {
+    text-align: center;
+    padding-bottom: 60px;
+    display: none;
+}
+
+.viwe-btn a {
+    color: var(--text-color);
+    background-color: var(--primary-btn-color);
+    padding: 12px 29px;
+    border-radius: 5px;
+}
+
+/*watch live css */
+.match {
+    width: 273px;
+    height: 242px;
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    text-align: center;
+}
+
+.match-imag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 53px;
+}
+
+.match-imag img {
+    width: 93.044px;
+}
+
+.match-imag span {
+    color: var(--bg-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.match-list-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.club-name h5 {
+    color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.match-info {
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.721px;
+    /* 123.259% */
+}
+
+/*watch live css end */
+
 /*footer css */
 footer {
     margin: auto;
-    height: 444px;
     background-color: #161616;
     text-align: center;
 }
@@ -248,6 +323,7 @@ footer nav ul li a:hover {
 
 .social-icons {
     font-size: 30px;
+    padding: 30px;
 }
 
 .social-icons a {
@@ -261,19 +337,19 @@ footer nav ul li a:hover {
         max-width: 85%;
     }
 
-    .top-banar {
-        max-width: 734px;
-        height: 398px;
+    .info-box {
+
+        justify-content: space-between;
     }
 
-    .top-content {
-        margin-left: 76px;
+    .top-banar .top-content {
+        padding: 50px 10px 50px 60px;
     }
 
     .top-content h1 {
         font-size: 40px;
         line-height: 50px;
-        width: 289px;
+        /*width: 289px;*/
     }
 
     .top-content p {
@@ -281,10 +357,8 @@ footer nav ul li a:hover {
         line-height: 24px;
     }
 
-    .top-image img {
-        width: 323px;
-        height: 340px;
-        margin-top: 62px;
+    .top-image {
+        padding-right: 0;
     }
 
     .Group-section {
@@ -300,7 +374,6 @@ footer nav ul li a:hover {
 
     .info-box {
         flex-direction: row;
-   
     }
 
     .info-box a {
@@ -312,8 +385,88 @@ footer nav ul li a:hover {
     }
 
     .blogs {
-        width: 347px;
-        height: 385.212px;
+        max-width: 347px;
+
     }
-   
+
+    .Group-section {
+        margin-bottom: 62px
+    }
+
+    .viwe-btn {
+        display: block;
+    }
+
+    footer h3 {
+        padding-top: 70px;
+    }
+}
+
+/*resvonsive css mobile view */
+
+@media only screen and (max-width: 688px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .top-banar {
+        flex-direction: column;
+    }
+
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px !important;
+    }
+
+    .top-content h1 {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 22px;
+        line-height: normal;
+    }
+
+    .top-content p {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .primary-button {
+        padding: 8px 12px;
+        margin-bottom: 21px;
+    }
+
+    .top-image {
+        padding: 0px 25px !important;
+    }
+
+    .Group-section {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .right {
+
+        grid-template-columns: 1fr !important;
+    }
+
+    .info-box {
+        flex-direction: column;
+    }
+
+    .info-box a {
+        max-width: 100%;
+    }
+
+    footer h3 {
+        font-size: 22px;
+        padding-top: 30px;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
 }

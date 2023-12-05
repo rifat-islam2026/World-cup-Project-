@@ -32,6 +32,7 @@ img {
     display: flex;
     border-radius: 30px;
     background-color: var(--bg-color);
+    margin-top: 30px;
 }
 
 .top-banar>* {
@@ -223,41 +224,45 @@ button {
     border-radius: 5px;
 }
 
-/*watch live css */
-.match {
-    width: 273px;
-    height: 242px;
-    border-radius: 10px;
-    border: 1px solid #E8E8E8;
-    text-align: center;
-}
+/*watch-live css */
 
 .match-imag {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    padding-top: 53px;
+    padding: 10px;
 }
 
 .match-imag img {
     width: 93.044px;
 }
-
-.match-imag span {
+.match-imag span{
+    color: #161616;
+    font-size: 16px;
+    font-weight: 700;;
+}
+.match-content p{
     color: var(--bg-color);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
+    padding: 10px 0;
 }
 
 .match-list-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 200px;
+    justify-content: space-between;
     gap: 15px;
+    padding: 10px;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+
 }
 
-.club-name h5 {
+.match-content h5 {
     color: var(--bg-color);
     font-size: 20px;
     font-weight: 600;
@@ -294,6 +299,7 @@ footer hr {
     height: 1px;
     color: rgba(255, 255, 255, 0.10);
     margin-bottom: 50px;
+    opacity:15%;
 }
 
 footer nav ul {
@@ -371,7 +377,12 @@ footer nav ul li a:hover {
         height: auto;
         background-color: var(--text-color);
     }
-
+    .right{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #right{
+        grid-template-columns: repeat(3,1fr);
+    }
     .info-box {
         flex-direction: row;
     }
@@ -380,19 +391,22 @@ footer nav ul li a:hover {
         border: 1px solid #E8E8E8;
     }
 
-    .right {
-        grid-template-columns: repeat(2, 1fr);
+    .match-imag img {
+        width: 73.044px;
+    }
+    .match-list-card {
+        min-height: 150px;
+    }
+    .match-content {
+        text-align: center;
     }
 
     .blogs {
         max-width: 347px;
-
     }
-
     .Group-section {
         margin-bottom: 62px
     }
-
     .viwe-btn {
         display: block;
     }
@@ -405,6 +419,7 @@ footer nav ul li a:hover {
 /*resvonsive css mobile view */
 
 @media only screen and (max-width: 688px) {
+    
     .container {
         max-width: 80%;
     }
